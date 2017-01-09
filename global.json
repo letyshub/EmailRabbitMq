@@ -1,0 +1,7 @@
+{
+    "projects":[
+        "EmailRabbitMq.Client",
+        "EmailRabbitMq.Sender",
+	"EmailRabbitMq.Shared"
+    ]
+}

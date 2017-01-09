@@ -1,0 +1,15 @@
+{
+  "name": "EmailRabbitMq.Shared",
+  "version": "1.0.0.0",
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "dependencies": {},
+  "frameworks": {
+    "netstandard1.6": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.1"
+      }
+    }
+  }
+}
