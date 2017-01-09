@@ -32,6 +32,9 @@ namespace EmailRabbitMq.Sender
                     var json = Encoding.UTF8.GetString(result.Body);
                     var msg = JsonConvert.DeserializeObject<EmailQueueMessage>(json);
 
+                    Console.WriteLine("Email from queue:");
+                    Console.WriteLine(json);
+
                     sender.Send(msg);
 
                     result = channel.BasicGet("email_queue", true);

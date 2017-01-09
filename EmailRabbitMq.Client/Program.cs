@@ -24,8 +24,10 @@ namespace EmailRabbitMq.Client
                 EmailQueueMessage message = new EmailQueueMessage
                 {
                     RecipientEmail = "test@test-email.com",
+                    RecipientName = "Test",
                     SenderName = "Rocky Balboa",
-                    SenderEmail = "rocky.balboa@test-email.com"
+                    SenderEmail = "rocky.balboa@test-email.com",
+                    Subject = "Test"
                 };
 
                 string json = JsonConvert.SerializeObject(message);
@@ -35,11 +37,8 @@ namespace EmailRabbitMq.Client
                                      routingKey: "email_queue",
                                      basicProperties: null,
                                      body: body);
-                Console.WriteLine(" [x] Sent {0}", json);
+                Console.WriteLine("Sent email: {0}", json);
             }
-
-            Console.WriteLine(" Press [enter] to exit.");
-            Console.ReadLine();
         }
     }
 }
